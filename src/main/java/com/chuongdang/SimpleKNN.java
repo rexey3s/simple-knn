@@ -61,6 +61,8 @@ public class SimpleKNN {
                     e.printStackTrace();
                 }
             }
+            System.out.println("Time elapsed: "+(System.currentTimeMillis()-postExecTime) +" (ms)");
+
         }
     }
     private static double getDoubleDistance(Object[] p1, Object[] p2) {

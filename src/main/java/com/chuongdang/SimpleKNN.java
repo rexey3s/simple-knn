@@ -15,6 +15,7 @@ public class SimpleKNN {
             System.err.println("com.example.KNNToolMapred <train_dir>  <k> <input_pattern> ");
             System.exit(2);
         }
+        long postExecTime = System.currentTimeMillis();
         BufferedReader br = null;
         String line = "";
         String cvsSplitBy = ",";
@@ -49,6 +50,7 @@ public class SimpleKNN {
                 kClosestLabels.add(lb);
                 System.out.println("K["+i+"]: "+lb);
             }
+            System.out.println("Time elapsed: "+(System.currentTimeMillis()-postExecTime) +" (ms)");
 
         } catch (IOException e) {
             e.printStackTrace();

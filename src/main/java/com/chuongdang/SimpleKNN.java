@@ -41,7 +41,6 @@ public class SimpleKNN {
                 store.put(row[0],getDoubleDistance(parsedInputPattern, parsedRow));
             }
             Map<String, Double> sortedLabelDistance = MapUtil.sortByValue(store);
-            System.out.println("Dist: "+sortedLabelDistance.values().toString());
 
             Iterator<String> labels = sortedLabelDistance.keySet().iterator();
             List<String> kClosestLabels = new LinkedList<>();
